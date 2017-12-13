@@ -19,6 +19,12 @@ def request_counter():
     return redirect('/')
 
 
+@app.route('/statistics')
+def present_statistics():
+    count = data_manager.read_file()
+    return render_template('statistics.html', count=count)
+
+
 @app.route('/')
 def frontend():
     return render_template('mainform.html')

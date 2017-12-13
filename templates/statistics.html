@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Request counter statistics
+        </title>
+    </head>
+    <body>
+        <table border="line">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Count
+                </th>
+            </tr>
+            {% for req in count %}
+                <tr>
+                    <td>
+                        {{ req}}
+                    </td>
+                    <td>
+                        {{ count[req] }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <p>
+            <a href="/">Back to main page</a>
+        </p>
+    </body>
+</html>
